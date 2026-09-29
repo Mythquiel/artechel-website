@@ -71,38 +71,41 @@ const OPINIE = [];
 const SKLEP = [
   {
     t: "Artykuły elektryczne i oświetlenie",
-    d: "Kompleksowa oferta materiałów elektroinstalacyjnych, osprzętu elektrycznego oraz szeroki wybór lamp i opraw oświetleniowych. Znajdziesz u nas wszystko, czego potrzebujesz do instalacji elektrycznej w domu czy mieszkaniu – od gniazdek i wyłączników, przez przewody i kable, po nowoczesne rozwiązania LED."
+    d: "Kompleksowa oferta materiałów elektroinstalacyjnych, osprzętu elektrycznego oraz szeroki wybór lamp i opraw oświetleniowych. Znajdziesz u nas wszystko, czego potrzebujesz do instalacji elektrycznej w domu czy mieszkaniu – od gniazdek i wyłączników, przez przewody i kable, po nowoczesne rozwiązania LED.",
+    emoji: "💡"
   },
   {
     t: "Baterie i akumulatory",
-    d: "Bogaty asortyment baterii jednorazowych i akumulatorów do pilotów, zegarków, zabawek, aparatów słuchowych oraz urządzeń elektronicznych. Oferujemy baterie wszystkich popularnych rozmiarów (AAA, AA, C, D, 9V) oraz akumulatory do pojazdów i sprzętu ogrodniczego."
-  },
-  {
-    t: "Artykuły motoryzacyjne",
-    d: "Szeroka gama akcesoriów samochodowych i motocyklowych – od żarówek samochodowych, przez płyny eksploatacyjne, filtry, wycieraczki, aż po akcesoria do pielęgnacji i konserwacji pojazdu. Pomagamy w doborze odpowiednich produktów do Twojego auta."
+    d: "Bogaty asortyment baterii jednorazowych i akumulatorów do pilotów, zegarków, zabawek, aparatów słuchowych oraz urządzeń elektronicznych. Oferujemy baterie wszystkich popularnych rozmiarów (AAA, AA, C, D, 9V) oraz akumulatory do pojazdów i sprzętu ogrodniczego.",
+    emoji: "🔋"
   },
   {
     t: "Akcesoria rowerowe",
-    d: "Wszystko dla rowerzystów – lampki, dzwonki, blokady, kaski, pompki, dętki, liczniki rowerowe oraz drobne części zamienne. Zarówno dla miłośników codziennych przejażdżek, jak i wymagających cyklistów."
+    d: "Wszystko dla rowerzystów – lampki, dzwonki, blokady, kaski, pompki, dętki, liczniki rowerowe oraz drobne części zamienne. Zarówno dla miłośników codziennych przejażdżek, jak i wymagających cyklistów.",
+    emoji: "🚴"
   },
   {
     t: "Małe AGD i artykuły gospodarstwa domowego",
-    d: "Praktyczne sprzęty AGD ułatwiające codzienne życie – czajniki, tostery, grzejniki, wentylatory oraz szeroki wybór drobnych artykułów dla domu. Doradzamy przy wyborze urządzeń dostosowanych do Twoich potrzeb."
+    d: "Praktyczne sprzęty AGD ułatwiające codzienne życie – czajniki, tostery, grzejniki, wentylatory oraz szeroki wybór drobnych artykułów dla domu. Doradzamy przy wyborze urządzeń dostosowanych do Twoich potrzeb.",
+    emoji: "🏠"
   },
 ];
 
 const UBEZP = [
   {
     t: "Ubezpieczenia komunikacyjne",
-    d: "Kompleksowa obsługa w zakresie ubezpieczeń OC, AC oraz assistance dla samochodów osobowych, ciężarowych i motocykli. Pomożemy Ci wybrać najkorzystniejszą ofertę spośród wielu towarzystw ubezpieczeniowych."
+    d: "Kompleksowa obsługa w zakresie ubezpieczeń OC, AC oraz assistance dla samochodów osobowych, ciężarowych i motocykli. Pomożemy Ci wybrać najkorzystniejszą ofertę spośród wielu towarzystw ubezpieczeniowych.",
+    emoji: "🚙"
   },
   {
     t: "Ubezpieczenia majątkowe",
-    d: "Ochrona Twojego domu, mieszkania i mienia domowego. Ubezpieczenia od ognia, zalania, kradzieży i innych zdarzeń losowych. Indywidualne dopasowanie zakresu ochrony do Twoich potrzeb i możliwości finansowych."
+    d: "Ochrona Twojego domu, mieszkania i mienia domowego. Ubezpieczenia od ognia, zalania, kradzieży i innych zdarzeń losowych. Indywidualne dopasowanie zakresu ochrony do Twoich potrzeb i możliwości finansowych.",
+    emoji: "🏡"
   },
   {
     t: "Fachowe doradztwo",
-    d: "Wieloletnie doświadczenie w branży ubezpieczeniowej pozwala nam profesjonalnie doradzić i dobrać optymalną ochronę ubezpieczeniową. Pomożemy w razie szkody i przeprowadzimy przez cały proces likwidacji."
+    d: "Wieloletnie doświadczenie w branży ubezpieczeniowej pozwala nam profesjonalnie doradzić i dobrać optymalną ochronę ubezpieczeniową. Pomożemy w razie szkody i przeprowadzimy przez cały proces likwidacji.",
+    emoji: "📋"
   },
 ];
 
@@ -195,8 +198,11 @@ function SiteContent() {
       <div className="topbar">
        <div className="wrap">
         <nav className="nav" aria-label="Główna nawigacja">
-          <b>Art. Techniczne, Motoryzacyjne i Elektryczne<br />Dorota Świtała, Ubezpieczenia</b>
-          <div>
+          <div className="nav-brand">
+            <strong>Dorota Świtała</strong>
+            <span>Art. Techniczne, Motoryzacyjne i Elektryczne · Ubezpieczenia</span>
+          </div>
+          <div className="nav-links">
             <a href="#sklep" onClick={(e) => idz(e, "sklep")}>Sklep</a>
             <a href="#ubezpieczenia" onClick={(e) => idz(e, "ubezpieczenia")}>Ubezpieczenia</a>
             <a href="#o-nas" onClick={(e) => idz(e, "o-nas")}>O nas</a>
@@ -242,7 +248,11 @@ function SiteContent() {
           </p>
           <div className="cols">
             {SKLEP.map((x) => (
-              <div key={x.t}><h3>{x.t}</h3><p>{x.d}</p></div>
+              <div key={x.t} className="card">
+                <div className="card-icon">{x.emoji}</div>
+                <h3>{x.t}</h3>
+                <p>{x.d}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -259,7 +269,11 @@ function SiteContent() {
           </p>
           <div className="cols">
             {UBEZP.map((x) => (
-              <div key={x.t}><h3>{x.t}</h3><p>{x.d}</p></div>
+              <div key={x.t} className="card">
+                <div className="card-icon">{x.emoji}</div>
+                <h3>{x.t}</h3>
+                <p>{x.d}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -306,10 +320,10 @@ function SiteContent() {
               <dt>Telefon</dt>
               <dd><a href={`tel:${FIRMA.telefon.replace(/\s/g, "")}`}>{FIRMA.telefon}</a></dd>
               <dt>E-mail</dt>
-              <dd>
-                <a href={`mailto:${FIRMA.email}`}>{FIRMA.email}</a>{" "}
-                <button onClick={kopiuj} style={{ marginLeft: 8, cursor: "pointer" }}>
-                  {copied ? "Skopiowano" : "Kopiuj"}
+              <dd className="email-row">
+                <a href={`mailto:${FIRMA.email}`}>{FIRMA.email}</a>
+                <button onClick={kopiuj} className="copy-btn" aria-label="Kopiuj adres e-mail">
+                  {copied ? "✓ Skopiowano" : "📋 Kopiuj"}
                 </button>
               </dd>
               <dt>Adres</dt>
@@ -367,6 +381,9 @@ function SiteContent() {
         <div className="wrap">
           <h2>Opinie klientów</h2>
           <p className="lead">Cieszymy się z każdej dobrej opinii. Zajrzyj, co piszą o nas w Google, albo dodaj własną.</p>
+          <div className="reviews-header">
+            <a className="btn main" href={linkGoogle} target="_blank" rel="noopener noreferrer">⭐ Zobacz opinie w Google</a>
+          </div>
           {OPINIE.length > 0 && (
             <div
               className="slider"
@@ -403,7 +420,6 @@ function SiteContent() {
             </div>
           )}
           <ReviewWidget />
-          <a className="btn main" href={linkGoogle} target="_blank" rel="noopener noreferrer">Zobacz opinie w Google</a>
         </div>
       </section>
 
