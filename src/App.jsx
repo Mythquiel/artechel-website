@@ -4,6 +4,7 @@ import Gate from "./components/Gate/Gate";
 import TopBar from "./components/Layout/TopBar";
 import Footer from "./components/Layout/Footer";
 import Hero from "./components/Hero/Hero";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
 import ShopSection from "./components/sections/ShopSection";
 import InsuranceSection from "./components/sections/InsuranceSection";
 import AboutSection from "./components/sections/AboutSection";
@@ -26,6 +27,7 @@ function SiteContent() {
       <div className="wrap">
         <Hero firma={FIRMA} />
       </div>
+      <ImageGallery />
       <ShopSection sklep={SKLEP} />
       <InsuranceSection ubezpieczenia={UBEZP} />
       <AboutSection />

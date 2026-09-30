@@ -1,13 +1,54 @@
 /* ---- About ---- */
+#o-nas h2 {
+  margin-bottom: 48px;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  align-items: start;
 }
 
 .about p {
   margin: 0 0 14px;
   max-width: 52ch;
+}
+
+.about .image-placeholder {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, var(--paper) 0%, #ebe8d5 100%);
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-height: 400px;
+}
+
+.about .image-placeholder:hover {
+  border-color: var(--volt);
+  background: linear-gradient(135deg, #ebe8d5 0%, var(--paper) 100%);
+}
+
+.about .placeholder-content {
+  text-align: center;
+  color: var(--steel);
+  padding: 24px;
+}
+
+.about .placeholder-content svg {
+  color: var(--green);
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+
+.about .placeholder-content p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--steel);
 }
 
 .why {

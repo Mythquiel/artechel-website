@@ -3,20 +3,24 @@ import "./Layout.css";
 export default function TopBar({ firma }) {
   const idz = (e, id) => {
     e.preventDefault();
-    const el = document.getElementById(id);
-    if (!el) return;
+    const el = id ? document.getElementById(id) : document.body;
     const ograniczony = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    el.scrollIntoView({ behavior: ograniczony ? "auto" : "smooth", block: "start" });
+
+    if (id) {
+      el?.scrollIntoView({ behavior: ograniczony ? "auto" : "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 0, behavior: ograniczony ? "auto" : "smooth" });
+    }
   };
 
   return (
     <div className="topbar">
       <div className="wrap">
         <nav className="nav" aria-label="Główna nawigacja">
-          <div className="nav-brand">
+          <a href="#top" className="nav-brand" onClick={(e) => idz(e, null)}>
             <strong>{firma.podtytul}</strong>
             <span>{firma.nazwa}</span>
-          </div>
+          </a>
           <div className="nav-links">
             <a href="#sklep" onClick={(e) => idz(e, "sklep")}>Sklep</a>
             <a href="#ubezpieczenia" onClick={(e) => idz(e, "ubezpieczenia")}>Ubezpieczenia</a>
