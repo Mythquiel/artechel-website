@@ -1,0 +1,107 @@
+/* ---- Contact form ---- */
+.msg {
+  grid-column: 1 / -1;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(29, 43, 36, 0.06);
+}
+
+.msg h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.msg p {
+  margin: 0 0 24px;
+  color: var(--steel);
+  font-size: 1.05rem;
+}
+
+.msg .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.msg label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.msg input,
+.msg textarea {
+  width: 100%;
+  font: inherit;
+  padding: 14px 16px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.msg input:focus,
+.msg textarea:focus {
+  border-color: var(--green);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(31, 77, 54, 0.1);
+}
+
+.msg textarea {
+  min-height: 160px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.msg .hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.msg button.btn {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.msg .status {
+  margin-top: 16px;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.msg .status.err {
+  color: #9b2c1f;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.msg .status.ok {
+  color: var(--green);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.msg button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 760px) {
+  .msg {
+    padding: 28px 24px;
+  }
+
+  .msg .row {
+    grid-template-columns: 1fr;
+  }
+}

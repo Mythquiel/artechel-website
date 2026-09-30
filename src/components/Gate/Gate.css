@@ -1,0 +1,59 @@
+/* ---- Gate (tymczasowa bramka) ---- */
+.gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  font-family: 'Public Sans', system-ui, sans-serif;
+  color: var(--ink);
+  padding: 24px;
+}
+
+.gate form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 48px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.gate h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+
+.gate p {
+  color: var(--steel);
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.gate input {
+  width: 100%;
+  font: inherit;
+  padding: 12px;
+  border: 1px solid var(--steel);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.gate .btn {
+  width: 100%;
+  cursor: pointer;
+  font: inherit;
+}
+
+.gate-err {
+  color: #9b2c1f;
+  font-weight: 600;
+  margin: 14px 0 0;
+}

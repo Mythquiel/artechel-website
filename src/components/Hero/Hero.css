@@ -1,0 +1,73 @@
+/* ---- Hero ---- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  padding: 72px 0 64px;
+  align-items: end;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 46ch;
+  color: var(--steel);
+  font-size: 1.1rem;
+  margin: 22px 0 28px;
+}
+
+/* ---- Plate (godziny) ---- */
+.plate {
+  background: linear-gradient(135deg, var(--green) 0%, #1a3f2d 100%);
+  color: var(--white);
+  padding: 32px;
+  border-radius: 12px;
+  border-top: 6px solid var(--volt);
+  box-shadow: 0 8px 24px rgba(29, 43, 36, 0.15);
+}
+
+.plate h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.plate ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plate li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1rem;
+}
+
+.plate li:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.plate span {
+  color: var(--volt);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 0;
+  }
+}

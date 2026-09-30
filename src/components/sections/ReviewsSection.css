@@ -1,0 +1,130 @@
+/* ---- Reviews widget ---- */
+.grw {
+  margin-bottom: 28px;
+}
+
+.reviews-header {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.reviews-header .btn {
+  font-size: 1.05rem;
+  padding: 16px 32px;
+  box-shadow: 0 4px 12px rgba(31, 77, 54, 0.2);
+  transition: all 0.3s ease;
+}
+
+.reviews-header .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(31, 77, 54, 0.3);
+}
+
+/* ---- Slider (opinie) ---- */
+.slider {
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.viewport {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(29, 43, 36, 0.08);
+}
+
+.track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    transition: none;
+  }
+}
+
+.slide {
+  flex: 0 0 100%;
+  margin: 0;
+  padding: 40px 48px;
+}
+
+.slide p {
+  margin: 16px 0 20px;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.slide cite {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 1.05rem;
+}
+
+.stars {
+  color: var(--volt);
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+}
+
+.ctrl {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.ctrl button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  width: 42px;
+  height: 42px;
+  border-radius: 2px;
+}
+
+.ctrl button:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dots button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+}
+
+.dots button[aria-current="true"] {
+  background: var(--green);
+}
+
+.dots button:hover {
+  background: var(--green);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 760px) {
+  .slide {
+    padding: 28px 24px;
+  }
+
+  .slide p {
+    font-size: 1.1rem;
+  }
+}

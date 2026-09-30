@@ -1,0 +1,40 @@
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--paper) 0%, #ebe8d5 100%);
+  border-radius: 12px;
+  border: 2px solid var(--line);
+}
+
+.cols h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.cols p {
+  margin: 0;
+  color: var(--steel);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* ---- Insurance section card variant ---- */
+.ins .card-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 760px) {
+  .card-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 2.5rem;
+  }
+}
