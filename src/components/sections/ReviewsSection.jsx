@@ -18,7 +18,7 @@ export default function ReviewsSection({ googleLink, opinie, widgetId }) {
 
   const linkGoogle =
     googleLink ||
-    "https://www.google.com/search?q=" + encodeURIComponent("Artechel Nowe Miasteczko opinie");
+    "https://www.google.com/search?q=" + encodeURIComponent("Art. Techniczne, Motoryzacyjne i Elektryczne · Dorota Świtała Nowe Miasteczko opinie");
 
   return (
     <section id="opinie">

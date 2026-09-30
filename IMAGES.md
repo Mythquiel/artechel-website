@@ -51,7 +51,7 @@ W pliku `src/components/ImageGallery/ImageGallery.jsx`:
 ```jsx
 <img
   src="/images/sklep-zewnatrz.jpg"
-  alt="Sklep Artechel - widok z zewnątrz"
+  alt="Sklep - widok z zewnątrz"
   loading="lazy"
 />
 ```
@@ -112,7 +112,7 @@ Możesz użyć formatu WebP z fallbackiem:
   <source srcSet="/images/sklep-zewnatrz.webp" type="image/webp" />
   <img
     src="/images/sklep-zewnatrz.jpg"
-    alt="Sklep Artechel - widok z zewnątrz"
+    alt="Sklep - widok z zewnątrz"
     loading="lazy"
   />
 </picture>
